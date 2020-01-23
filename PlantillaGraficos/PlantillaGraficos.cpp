@@ -81,7 +81,7 @@ void dibujarTriangulos() {
 			glVertex3f(0.7f, -0.7f, 0.0f);*/
 	//Especificar que dejaremos de dibujar
 
-	glColor3f(0.0f, 0.0f, 0.2f);
+	glColor3f(0.2f, 0.0f, 0.0f);
 
 	glVertex3f(-0.8f, 0.8f, 0.0f);
 	glVertex3f(0.8f, 0.8f, 0.0f);
@@ -92,11 +92,35 @@ void dibujarTriangulos() {
 	glVertex3f(-0.8f, 0.8f, 0.0f);
 	glVertex3f(-0.8f, -0.8f, 0.0f);
 	glVertex3f(0.8f, -0.8f, 0.0f);
+
+	//cesped
+	glColor3f(0.0f, 0.2f, 0.0f);
+
+	glVertex3f(-1.0f, -0.7f, 0.0f);
+	glVertex3f(1.0f, -0.7f, 0.0f);
+	glVertex3f(-1.0f, -1.0f, 0.0f);
+
+	glVertex3f(-1.0f, -1.0f, 0.0f);
+	glVertex3f(1.0f, -1.0f, 0.0f);
+	glVertex3f(1.0f, -0.7f, 0.0f);
+
+	//puerta
+	glColor3f(0.0f, 0.0f, 0.2f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, 0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+
+	glVertex3f(-0.15f, 0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+
 	glEnd();
 }
 
+
 void dibujar() {
-	dibujarPoligono();
+	dibujarTriangulos();
 }
 
 int main()
