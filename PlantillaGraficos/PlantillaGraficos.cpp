@@ -11,6 +11,8 @@
 
 #include <iostream>
 
+#include <math.h>
+
 using namespace std;
 
 void dibujarPoligono() {
@@ -81,40 +83,59 @@ void dibujarTriangulos() {
 			glVertex3f(0.7f, -0.7f, 0.0f);*/
 	//Especificar que dejaremos de dibujar
 
-	glColor3f(0.2f, 0.0f, 0.0f);
+	//casa
+	glColor3f(0.73f, 0.4f, 0.06f);
 
-	glVertex3f(-0.8f, 0.8f, 0.0f);
-	glVertex3f(0.8f, 0.8f, 0.0f);
-	glVertex3f(0.8f, -0.8f, 0.0f);
+	glVertex3f(-0.2f, 0.3f, 0.0f);
+	glVertex3f(0.7f, 0.3f, 0.0f);
+	glVertex3f(0.7f, -0.7f, 0.0f);
 
-	glColor3f(0.2f, 0.0f, 0.0f);
-
-	glVertex3f(-0.8f, 0.8f, 0.0f);
-	glVertex3f(-0.8f, -0.8f, 0.0f);
-	glVertex3f(0.8f, -0.8f, 0.0f);
+	glVertex3f(-0.2f, 0.3f, 0.0f);
+	glVertex3f(-0.2f, -0.7f, 0.0f);
+	glVertex3f(0.7f, -0.7f, 0.0f);
 
 	//cesped
-	glColor3f(0.0f, 0.2f, 0.0f);
+	glColor3f(0.26f, 0.68f, 0.13f);
 
-	glVertex3f(-1.0f, -0.7f, 0.0f);
-	glVertex3f(1.0f, -0.7f, 0.0f);
+	glVertex3f(-1.0f, -0.6f, 0.0f);
+	glVertex3f(1.0f, -0.6f, 0.0f);
 	glVertex3f(-1.0f, -1.0f, 0.0f);
 
 	glVertex3f(-1.0f, -1.0f, 0.0f);
 	glVertex3f(1.0f, -1.0f, 0.0f);
-	glVertex3f(1.0f, -0.7f, 0.0f);
+	glVertex3f(1.0f, -0.6f, 0.0f);
+
+	//ventana
+	glColor3f(0.69f, 0.88f, 0.96f);
+
+	glVertex3f(-0.13f, 0.13f, 0.0f);
+	glVertex3f(0.13f, 0.13f, 0.0f);
+	glVertex3f(0.13f, -0.13f, 0.0f);
+
+	glVertex3f(-0.13f, 0.13f, 0.0f);
+	glVertex3f(-0.13f, -0.13f, 0.0f);
+	glVertex3f(0.13f, -0.13f, 0.0f);
 
 	//puerta
-	glColor3f(0.0f, 0.0f, 0.2f);
+	/*glColor3f(0.81f, 0.78f, 0.69f);
 
-	glVertex3f(-0.15f, 0.15f, 0.0f);
-	glVertex3f(0.15f, 0.15f, 0.0f);
-	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.2f, 0.3f, 0.0f);
+	glVertex3f(0.7f, 0.3f, 0.0f);
+	glVertex3f(0.7f, -0.7f, 0.0f);
 
-	glVertex3f(-0.15f, 0.15f, 0.0f);
-	glVertex3f(-0.15f, -0.15f, 0.0f);
-	glVertex3f(0.15f, -0.15f, 0.0f);
+	glVertex3f(-0.2f, 0.3f, 0.0f);
+	glVertex3f(-0.2f, -0.7f, 0.0f);
+	glVertex3f(0.7f, -0.7f, 0.0f);*/
 
+	glEnd();
+}
+
+void dibujarCirculo() {
+	glBegin(GL_POLYGON);
+	glColor3f(0.53f, 0.59f, 0.7f);
+	for (double i = 0; i < 360.0; i+=5.0) {
+		glVertex3f((0.5 * cos(i * 3.14159 / 180.0)) - 0.6, (0.1 * sin(i * 3.14159 / 180.0)) + 0.4, 0.0f);
+	}
 	glEnd();
 }
 
@@ -163,7 +184,7 @@ int main()
 		glViewport(0, 0, 600, 600);
 		//Establecemos el color de borrado
 		//Valores RGBA
-		glClearColor(3, 0.8, 0.4, 1);
+		glClearColor(0.49, 0.81, 0.93, 1);
 		//Borrar
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		//Actualizar valores y dibujar
