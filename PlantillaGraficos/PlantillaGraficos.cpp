@@ -83,6 +83,17 @@ void dibujarTriangulos() {
 			glVertex3f(0.7f, -0.7f, 0.0f);*/
 	//Especificar que dejaremos de dibujar
 
+	//cesped
+	glColor3f(0.26f, 0.68f, 0.13f);
+
+	glVertex3f(-1.0f, -0.6f, 0.0f);
+	glVertex3f(1.0f, -0.6f, 0.0f);
+	glVertex3f(-1.0f, -1.0f, 0.0f);
+
+	glVertex3f(-1.0f, -1.0f, 0.0f);
+	glVertex3f(1.0f, -1.0f, 0.0f);
+	glVertex3f(1.0f, -0.6f, 0.0f);
+
 	//casa
 	glColor3f(0.73f, 0.4f, 0.06f);
 
@@ -94,16 +105,6 @@ void dibujarTriangulos() {
 	glVertex3f(-0.2f, -0.7f, 0.0f);
 	glVertex3f(0.7f, -0.7f, 0.0f);
 
-	//cesped
-	glColor3f(0.26f, 0.68f, 0.13f);
-
-	glVertex3f(-1.0f, -0.6f, 0.0f);
-	glVertex3f(1.0f, -0.6f, 0.0f);
-	glVertex3f(-1.0f, -1.0f, 0.0f);
-
-	glVertex3f(-1.0f, -1.0f, 0.0f);
-	glVertex3f(1.0f, -1.0f, 0.0f);
-	glVertex3f(1.0f, -0.6f, 0.0f);
 
 	//ventana
 	glColor3f(0.69f, 0.88f, 0.96f);
@@ -117,15 +118,33 @@ void dibujarTriangulos() {
 	glVertex3f(0.13f, -0.13f, 0.0f);
 
 	//puerta
-	/*glColor3f(0.81f, 0.78f, 0.69f);
+	glColor3f(0.81f, 0.78f, 0.69f);
 
-	glVertex3f(-0.2f, 0.3f, 0.0f);
-	glVertex3f(0.7f, 0.3f, 0.0f);
-	glVertex3f(0.7f, -0.7f, 0.0f);
+	glVertex3f(0.25f, -0.25f, 0.0f);
+	glVertex3f(0.6f, -0.25f, 0.0f);
+	glVertex3f(0.6f, -0.7f, 0.0f);
 
-	glVertex3f(-0.2f, 0.3f, 0.0f);
-	glVertex3f(-0.2f, -0.7f, 0.0f);
-	glVertex3f(0.7f, -0.7f, 0.0f);*/
+	glVertex3f(0.25f, -0.25f, 0.0f);
+	glVertex3f(0.25f, -0.7f, 0.0f);
+	glVertex3f(0.6f, -0.7f, 0.0f);
+
+	//techo
+	glColor3f(0.62f, 0.25f, 0.07f);
+
+	glVertex3f(0.3f, 0.7f, 0.0f);
+	glVertex3f(-0.4f, 0.3f, 0.0f);
+	glVertex3f(0.9f, 0.3f, 0.0f);
+
+	//tronco
+	glColor3f(0.59f, 0.32f, 0.2f);
+
+	glVertex3f(-0.75f, -0.25f, 0.0f);
+	glVertex3f(-0.60f, -0.25f, 0.0f);
+	glVertex3f(-0.60f, -0.7f, 0.0f);
+
+	glVertex3f(-0.75f, -0.25f, 0.0f);
+	glVertex3f(-0.75f, -0.7f, 0.0f);
+	glVertex3f(-0.6f, -0.7f, 0.0f);
 
 	glEnd();
 }
