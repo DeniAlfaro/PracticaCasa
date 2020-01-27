@@ -97,11 +97,11 @@ void dibujarTriangulos() {
 	//casa
 	glColor3f(0.73f, 0.4f, 0.06f);
 
-	glVertex3f(-0.2f, 0.3f, 0.0f);
-	glVertex3f(0.7f, 0.3f, 0.0f);
+	glVertex3f(-0.2f, 0.2f, 0.0f);
+	glVertex3f(0.7f, 0.2f, 0.0f);
 	glVertex3f(0.7f, -0.7f, 0.0f);
 
-	glVertex3f(-0.2f, 0.3f, 0.0f);
+	glVertex3f(-0.2f, 0.2f, 0.0f);
 	glVertex3f(-0.2f, -0.7f, 0.0f);
 	glVertex3f(0.7f, -0.7f, 0.0f);
 
@@ -132,8 +132,8 @@ void dibujarTriangulos() {
 	glColor3f(0.62f, 0.25f, 0.07f);
 
 	glVertex3f(0.3f, 0.7f, 0.0f);
-	glVertex3f(-0.4f, 0.3f, 0.0f);
-	glVertex3f(0.9f, 0.3f, 0.0f);
+	glVertex3f(-0.4f, 0.2f, 0.0f);
+	glVertex3f(0.9f, 0.2f, 0.0f);
 
 	//tronco
 	glColor3f(0.59f, 0.32f, 0.2f);
@@ -150,10 +150,66 @@ void dibujarTriangulos() {
 }
 
 void dibujarCirculo() {
+
+	//sol
 	glBegin(GL_POLYGON);
-	glColor3f(0.53f, 0.59f, 0.7f);
+	glColor3f(0.94f, 0.82f, 0.06f);
 	for (double i = 0; i < 360.0; i+=5.0) {
-		glVertex3f((0.5 * cos(i * 3.14159 / 180.0)) - 0.6, (0.1 * sin(i * 3.14159 / 180.0)) + 0.4, 0.0f);
+		glVertex3f(
+			(0.15 * cos(i * 3.14159 / 180.0)) - 0.8, //tamaño X y offset X
+			(0.15 * sin(i * 3.14159 / 180.0)) + 0.8, //tamaño Y y offset Y
+			0.0f);
+	}
+	glEnd();
+
+	//nubes
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 5.0) {
+		glVertex3f(
+			(0.1 * cos(i * 3.14159 / 180.0)) - 0.2, //tamaño X y offset X
+			(0.05 * sin(i * 3.14159 / 180.0)) + 0.7, //tamaño Y y offset Y
+			0.0f);
+	}
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 5.0) {
+		glVertex3f(
+			(0.1 * cos(i * 3.14159 / 180.0)) - 0.1, //tamaño X y offset X
+			(0.05 * sin(i * 3.14159 / 180.0)) + 0.75, //tamaño Y y offset Y
+			0.0f);
+	}
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 5.0) {
+		glVertex3f(
+			(0.1 * cos(i * 3.14159 / 180.0)) - (-0.6), //tamaño X y offset X
+			(0.05 * sin(i * 3.14159 / 180.0)) + 0.8, //tamaño Y y offset Y
+			0.0f);
+	}
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 5.0) {
+		glVertex3f(
+			(0.1 * cos(i * 3.14159 / 180.0)) - (-0.7), //tamaño X y offset X
+			(0.05 * sin(i * 3.14159 / 180.0)) + 0.85, //tamaño Y y offset Y
+			0.0f);
+	}
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.94f, 0.82f, 0.06f);
+	for (double i = 0; i < 360.0; i += 5.0) {
+		glVertex3f(
+			(0.05 * cos(i * 3.14159 / 180.0)) - 0.0, //tamaño X y offset X
+			(0.05 * sin(i * 3.14159 / 180.0)) + 0.0, //tamaño Y y offset Y
+			0.0f);
 	}
 	glEnd();
 }
@@ -161,6 +217,7 @@ void dibujarCirculo() {
 
 void dibujar() {
 	dibujarTriangulos();
+	dibujarCirculo();
 }
 
 int main()
